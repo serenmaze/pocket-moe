@@ -1,4 +1,15 @@
 const serverless = require('serverless-http');
-const app = require('../../index.js');
+const express = require('express');
  
-module。exports = serverless(app);
+const app = express();
+ 
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+ 
+app.get('/@:name', (req, res) => {
+  const { name } = req.params;
+  res.send(`Counter: ${name}`);
+});
+ 
+module.exports = serverless(app);
