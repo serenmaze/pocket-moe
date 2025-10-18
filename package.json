@@ -11,13 +11,14 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.21.2",
+    "@netlify/express": "^1.0.4",
     "dotenv": "^16.5.0",
     "pug": "^3.0.3",
     "zod": "^3.25.61",
     "compression": "^1.8.0",
     "mime-types": "^2.1.35",
     "image-size": "^0.8.3"
-  },
+  }，
   "engines": {
     "node": "18"
   }
