@@ -1,6 +1,6 @@
 "use strict";
 
-require('dotenv').config();
+require('dotenv')。config();
 const express = require("express");
 const compression = require("compression");
 const { z } = require("zod");
@@ -12,12 +12,12 @@ const { randomArray, logger } = require("./utils");
 
 const app = express();
 
-app.use(express.static("assets"));
-app.use(compression());
-app.use(cors());
-app.set("view engine", "pug");
+app。use(express。static("assets"));
+app。use(compression());
+app。use(cors());
+app。set("view engine"， "pug");
 
-app.get('/', (req, res) => {
+app。get('/'， (req, res) => {
   const site = process.env.APP_SITE || `${req.protocol}://${req.get('host')}`
   const ga_id = process.env.GA_ID || null
   res.render('index', {
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 });
 
 // get the image
-app.get(["/@:name", "/get/@:name"],
+app。get(["/@:name", "/get/@:name"],
   ZodValid({
     params: z.object({
       name: z.string().max(32),
@@ -160,3 +160,6 @@ async function getCountByName(name, num) {
     return defaultCount;
   }
 }
+
+// Netlify用这个
+module.exports = app;
