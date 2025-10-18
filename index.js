@@ -28,7 +28,7 @@ app。get('/'， (req, res) => {
 });
 
 // get the image
-app。get(["/@:name", "/get/@:name"],
+app。get(["/@:name"， "/get/@:name"],
   ZodValid({
     params: z.object({
       name: z.string().max(32),
@@ -99,10 +99,6 @@ app.get("/heart-beat", (req, res) => {
   res.set("cache-control", "max-age=0, no-cache, no-store, must-revalidate");
   res.send("alive");
   logger.debug("heart-beat");
-});
-
-const listener = app.listen(process.env.APP_PORT || 3000, () => {
-  logger.info("Your app is listening on port " + listener.address().port);
 });
 
 let __cache_counter = {};
