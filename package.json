@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.21.2",
-    "@netlify/express": "^1.0.4",
+    "serverless-http": "^3.2.0",
     "dotenv": "^16.5.0",
     "pug": "^3.0.3",
     "zod": "^3.25.61",
