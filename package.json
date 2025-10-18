@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
-  }，
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "compression": "^1.8.0",
     "mime-types": "^2.1.35",
     "image-size": "^0.8.3"
-  }，
+  },
   "engines": {
     "node": "18"
   }
